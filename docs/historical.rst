@@ -13,6 +13,8 @@ To see the summary of the changes sent to Linux please execute the following com
 2024
 ----
   1. Finished the removal of the sentinel element in the ctl_tables.
+  2. Adding const qualifier to static ctl_table arguments within sysctl subsys
+  3. Remove the sysctl array sentinels in all the subsystems.
 
 2023
 ----
