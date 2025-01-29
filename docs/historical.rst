@@ -11,8 +11,8 @@ To see all the changes ever made as "oneliners" execute:
   git log --merges  --grep="Pull sysctl"
 
 
-Per year (tag string)
-=====================
+Per year (tag message)
+======================
 
 To see the tag messages from one year, replace YYYY.
 ::
