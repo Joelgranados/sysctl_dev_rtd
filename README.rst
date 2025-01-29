@@ -1,5 +1,11 @@
-Linux Kernel sysctl Info
-========================
+This is the source of the documentation page for Linux Kernel sysctl support.
 
-This should aggregate all information pertaining to sysctl linux kernel
-subsystem
+What this is
+============
+  * Inlude the direction of sysctl development
+
+What this is NOT
+================
+  * Documentation on how to use sysctl. Go to
+    ``Documentation/admin-guide/sysctl`` Linux kernel directory for that.
+
