@@ -6,7 +6,7 @@ Objective 1 : Provide contextual info on series and the subsystem in general
 ============================================================================
 
 **Key Result 1.1:**
-------------------
+-------------------
 Track all sysctl patch sets through `sysctl patchwork`_
 
 **Key Result 1.2:**
@@ -25,10 +25,7 @@ Add the `sysclt ReadTheDocs web site`_ to the MAINTAINERS file
 .. _sysctl patchwork: https://patchwork.kernel.org/project/sysctl/list/
 .. _sysctl ReadTheDocs web site: https://sysctl-rtd.readthedocs.io/en/latest
 
-.. note::
-
-  Motivation:
-  -----------
+.. note:: Motivation:
   1. Increase awareness on what is needed in the subsystem
   2. Avoid misunderstandings
   3. Help in explanations. As we can just point to the docs.
@@ -46,16 +43,12 @@ their respective subsystems
 Participate in moving at least 80% of the ``ctl_tables`` in ``kern_table`` to
 their respective subsystems
 
-.. note::
-
-  Motivation
-  -----------
+.. note:: Motivation
   * To avoid merge conflicts in kerne/sysctl.c
   * To give back the power of managing the subsystem specific sysctls to their
     respective maintainers
 
-  Comments
-  --------
+.. note::  Comments
   There are currently two arrays that we target in kernel/sysctl.c:
   vm_table and kernel_table
 
@@ -72,10 +65,7 @@ register function. This is an initial list (possibly more?):
 watchdog_hardlockup_sysctl, iwcm_ctl_table, ucma_ctl_table,
 memory_allocation_profiling_sysctls, loadpin_sysctl_table.
 
-.. note::
-
-  Motivation
-  ----------
+.. note:: Motivation
   Const qualifying ctl_table structs prevents unintended modification of
   proc_handler function pointers by placing them in the .rodata section.
 
