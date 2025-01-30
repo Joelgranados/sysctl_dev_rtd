@@ -3,8 +3,8 @@ sysctl OKRs 2025
 ================
 
 
-Objective 1: Provide contextual info on series and the subsystem in general
-===========================================================================
+Objective 1 : Provide contextual info on series and the subsystem in general
+============================================================================
 - **Key Result 1.1:** Track all sysctl patch sets through `sysctl patchwork`_
 - **Key Result 1.2:** At least once a linux kernel release, update the notes
   about current development in `sysctl ReadTheDocs web site`_
@@ -21,8 +21,8 @@ Why
 2. Avoid misunderstandings
 3. Help in explanations. As we can just point to the docs.
 
-Objective 2: Remove all non-core ctl_tables from ``kernel/sysctl.c``
-====================================================================
+Objective 2 : Remove all non-core ctl_tables from ``kernel/sysctl.c``
+=====================================================================
 - **Key Result 2.1:** Participate in moving at least 80% of the ``ctl_tables``
   in ``vm_table`` to their respective subsystems
 - **Key Result 2.2:** Participate in moving at least 80% of the ``ctl_tables``
@@ -39,8 +39,8 @@ Comments
 There are currently two arrays that we target in kernel/sysctl.c:
 vm_table and kernel_table
 
-Objective 3: Const qualify all the ctl_tables in the linux kernel
-=================================================================
+Objective 3 : Const qualify all the ctl_tables in the linux kernel
+==================================================================
 - **Key Result 3.1:** Const qualify the net directory
 - **Key Result 3.2:** Const qualify the ctl_table structs that are modified
   before calling the sysctl register function. This is an initial list (possibly
