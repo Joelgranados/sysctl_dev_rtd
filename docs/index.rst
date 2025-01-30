@@ -9,7 +9,7 @@ Contents
 
 .. toctree::
 
-   Todo <todo>
-   Historical <historical>
    Current Development <current>
-
+   2025 OKRs <OKRs25>
+   Historical <historical>
+   Todo <todo>
