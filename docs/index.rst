@@ -9,5 +9,7 @@ Contents
 
 .. toctree::
 
-   todo
-   historical
+   Todo <todo>
+   Historical <historical>
+   Current Development <current>
+
