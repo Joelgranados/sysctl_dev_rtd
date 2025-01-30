@@ -12,4 +12,4 @@ Contents
    Current Development <current>
    2025 OKRs <OKRs25>
    Historical <historical>
-   Todo <todo>
+   Ideas <ideas>
