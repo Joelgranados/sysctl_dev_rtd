@@ -3,6 +3,7 @@ Todo
 ====
 
 Ideas that have potential to make their way into the roadmap
+In no particular order
 
 1. Reduce the number of register functions.
     - Remove the ``*_sz`` function
@@ -21,3 +22,6 @@ Ideas that have potential to make their way into the roadmap
    selftests support
 
 6. hookup kdeovps sysctl testing with 0-day
+
+7. Add the results of the sysclt testing in a TAP format so it can be used
+   as input to something else
