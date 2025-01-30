@@ -25,7 +25,8 @@ Add the `sysclt ReadTheDocs web site`_ to the MAINTAINERS file
 .. _sysctl patchwork: https://patchwork.kernel.org/project/sysctl/list/
 .. _sysctl ReadTheDocs web site: https://sysctl-rtd.readthedocs.io/en/latest
 
-.. note:
+.. note::
+
   Motivation:
   -----------
   1. Increase awareness on what is needed in the subsystem
@@ -45,7 +46,7 @@ their respective subsystems
 Participate in moving at least 80% of the ``ctl_tables`` in ``kern_table`` to
 their respective subsystems
 
-.. note:
+.. note::
 
   Motivation
   -----------
@@ -71,7 +72,7 @@ register function. This is an initial list (possibly more?):
 watchdog_hardlockup_sysctl, iwcm_ctl_table, ucma_ctl_table,
 memory_allocation_profiling_sysctls, loadpin_sysctl_table.
 
-.. note:
+.. note::
 
   Motivation
   ----------
