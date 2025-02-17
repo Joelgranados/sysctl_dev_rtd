@@ -31,7 +31,6 @@ Fixes multiple sysctl proc_handler usage error
   * [PATCH v4 0/2]  Fixes multiple sysctl proc_handler usage error
   * 20250115132211.25400-1-nicolas.bouchinet@clip-os.org
   * reviewed-by jan kara, Kees
-  * In sysctl-testing
-  * Give it a once over before sysctl-next
+  * In sysctl-next
 
 
