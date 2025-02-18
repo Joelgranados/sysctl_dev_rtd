@@ -34,11 +34,34 @@ Fixes multiple sysctl proc_handler usage error
   * In sysctl-next
 
 
-Emptying kern_table
-===================
+On the mailing lists
+====================
 
+Emptying kern_table
+-------------------
   * branch containing changes `mv_ctltables`_
   * `V1 lore thread`_
 
-.. _V1 lore thread: https://lore.kernel.org/all/20250218-jag-mv_ctltables-v1-0-cd3698ab8d29@kernel.org
-.. _mv_ctltables: https://git.kernel.org/pub/scm/linux/kernel/git/joel.granados/linux.git/log/?h=jag/mv_ctltables
+.. _V1 lore thread:
+   https://lore.kernel.org/all/20250218-jag-mv_ctltables-v1-0-cd3698ab8d29@kernel.org
+.. _mv_ctltables:
+   https://git.kernel.org/pub/scm/linux/kernel/git/joel.granados/linux.git/log/?h=jag/mv_ctltables
+
+Const qualifying straglers
+--------------------------
+  * `watchdog_sysctl revert initial discussion`_
+    - Reverting "watchdog/hardlockup: keep kernel.nmi_watchdog sysctl as 0444 if
+      probe fails" will remove the modification to the array element and will
+      place nmi_watchdog into .rodata
+
+  * loadpin_sysctl_table
+    - Pending: implement a new proc_handler function that handles the setting of
+      load_root_writable
+
+  * memory_allocation_profilling_sysctl
+    - Pending: Analisys
+
+.. _watchdog_sysctl revert initial discussion:
+   https://lore.kernel.org/all/588ec9ab-b38a-40b3-8db5-575a09e9a126@meta.com/
+
+
