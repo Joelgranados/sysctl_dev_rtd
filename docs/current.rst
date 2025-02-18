@@ -15,7 +15,7 @@ sysctl: move sysctls from vm_table into its own files
       - (Layton)
         [PATCH v4 -next 00/15] sysctl: move sysctls from vm_table into its own files
       - There are more!!! by kees
-  * Currently in sysctl-testing
+  * Currently in sysctl-next
   * Rebased on top of v6.14-rc1 and reposted to sysctl-testing
   * Passed the allyes on x86_64
 
@@ -34,3 +34,11 @@ Fixes multiple sysctl proc_handler usage error
   * In sysctl-next
 
 
+Emptying kern_table
+===================
+
+  * branch containing changes `mv_ctltables`_
+  * `V1 lore thread`_
+
+.. _V1 lore thread: https://lore.kernel.org/all/20250218-jag-mv_ctltables-v1-0-cd3698ab8d29@kernel.org
+.. _mv_ctltables: https://git.kernel.org/pub/scm/linux/kernel/git/joel.granados/linux.git/log/?h=jag/mv_ctltables
