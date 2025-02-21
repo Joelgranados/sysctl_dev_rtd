@@ -33,6 +33,11 @@ Fixes multiple sysctl proc_handler usage error
   * reviewed-by jan kara, Kees
   * In sysctl-next
 
+Misc Fixes
+----------
+  * [PATCH] selftests: fix spelling/grammar errors in sysctl/sysctl.sh
+    message-ID: 20250128103853.7806-1-chandrapratap3519@gmail.com
+
 
 On the mailing lists
 ====================
