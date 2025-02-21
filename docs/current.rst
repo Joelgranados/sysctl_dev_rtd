@@ -65,3 +65,12 @@ Const qualifying straglers
    https://lore.kernel.org/all/588ec9ab-b38a-40b3-8db5-575a09e9a126@meta.com/
 
 
+sysctl: expose sysctl_check_table for unit testing and use it
+-------------------------------------------------------------
+  * its in V4
+  * Put it in sysctl-testing on 21 Feb 25
+  * `sysctl_check_table for unit testing discussion`_
+  * Review latest version
+
+.. _sysctl_check_table for unit testing discussion:
+   https://lore.kernel.org/20250121213354.3775644-1-jsperbeck@google.com
