@@ -37,6 +37,9 @@ Misc Fixes
 ----------
   * [PATCH] selftests: fix spelling/grammar errors in sysctl/sysctl.sh
     message-ID: 20250128103853.7806-1-chandrapratap3519@gmail.com
+  * [PATCH sysctl-next v2] selftests/sysctl: fix wording of help messages
+    message-ID: 20250221102151.5593-1-bharadwaj.raju777@gmail.com
+
 
 
 On the mailing lists
@@ -46,6 +49,10 @@ Emptying kern_table
 -------------------
   * branch containing changes `mv_ctltables`_
   * `V1 lore thread`_
+  * Several patches got picked up by the tip robot
+    - [tip: perf/core] perf/core: Move perf_event sysctls into kernel/events
+    - [tip: x86/core] x86: Move sysctls into arch/x86
+
 
 .. _V1 lore thread:
    https://lore.kernel.org/all/20250218-jag-mv_ctltables-v1-0-cd3698ab8d29@kernel.org
