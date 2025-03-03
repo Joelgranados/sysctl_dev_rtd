@@ -86,3 +86,35 @@ sysctl: expose sysctl_check_table for unit testing and use it
 
 .. _sysctl_check_table for unit testing discussion:
    https://lore.kernel.org/20250121213354.3775644-1-jsperbeck@google.com
+
+[PATCH v2 0/6] Fixes multiple sysctl bound checks
+-------------------------------------------------
+  * Sent reviews
+    - Asked to see if the patches can move into mainline through other
+      subsystems
+    - asked to change coda_timeout to unsinged int.
+  * When a ctl_table->data is unsigned int* and uses a proc_dointvec as its
+    proc_handler on a write, data silently gets cast from unsigned int* into
+    singed int* (kernel/sysctl.c (__do_proc_dointvec) [i = (int *) tbl_data])
+    and from unsinged long into singed int (kernel/sysctl.c (proc_dointvec_conv)
+    [WRITE_ONCE(*valp, *lvalp)] )
+
+  * The issue in 3b3376f222e3 ("sysctl.c: fix underflow value setting risk in vm_table")
+    was that the extra1 value was getting ignored because it was calling
+    proc_dointvec. replacing with proc_dointvec_minmax properly forwards the
+    extra1 value.
+    What is happening in this series is not the same because no extra{1,2}
+    values where set in any of the places touched by this series.
+    The extra{1,2} variables are ignored when proc_dointvec is used as a
+    proc_handler. Values of NULL, NULL are passed to conv and data arguments
+    (this is where extra{1,2} should be forwared).
+
+  * hpet_max_freq -> unsigned int
+    default_backlog -> unsinged int
+    max_backlog -> unsigned int
+    scsi_logging_level -> unsigned int
+    nsm_local_state -> unsigned int
+    nfs_idmap_cache_timeout -> unsigned int
+
+    coda_timeout -> **unsigned long**
+
