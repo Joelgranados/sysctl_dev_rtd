@@ -89,10 +89,17 @@ sysctl: expose sysctl_check_table for unit testing and use it
 
 [PATCH v2 0/6] Fixes multiple sysctl bound checks
 -------------------------------------------------
+
+  * core/{iwcm,ucma}.c are upstreamed through the `rdma tree`_
+  * drivers/scsi/scsi_sysctl.c upstreamed through the scsi-stating tree
+  * fs/lockd/svc.c applied commit id 8e6d33ea0159b39d670b7986324bd6135ee9d5f7
+
+
   * Sent reviews
     - Asked to see if the patches can move into mainline through other
       subsystems
     - asked to change coda_timeout to unsinged int.
+
   * When a ctl_table->data is unsigned int* and uses a proc_dointvec as its
     proc_handler on a write, data silently gets cast from unsigned int* into
     singed int* (kernel/sysctl.c (__do_proc_dointvec) [i = (int *) tbl_data])
@@ -115,6 +122,6 @@ sysctl: expose sysctl_check_table for unit testing and use it
     scsi_logging_level -> unsigned int
     nsm_local_state -> unsigned int
     nfs_idmap_cache_timeout -> unsigned int
-
     coda_timeout -> **unsigned long**
 
+.. _rdma tree: https://web.git.kernel.org/pub/scm/linux/kernel/git/rdma/rdma.git/commit/?h=wip/leon-for-next&id=f33cd9b3fd03a791296ab37550ffd26213a90c4e
