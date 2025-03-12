@@ -94,7 +94,6 @@ sysctl: expose sysctl_check_table for unit testing and use it
   * drivers/scsi/scsi_sysctl.c upstreamed through the scsi-stating tree
   * fs/lockd/svc.c applied commit id 8e6d33ea0159b39d670b7986324bd6135ee9d5f7
 
-
   * Sent reviews
     - Asked to see if the patches can move into mainline through other
       subsystems
@@ -125,3 +124,12 @@ sysctl: expose sysctl_check_table for unit testing and use it
     coda_timeout -> **unsigned long**
 
 .. _rdma tree: https://web.git.kernel.org/pub/scm/linux/kernel/git/rdma/rdma.git/commit/?h=wip/leon-for-next&id=f33cd9b3fd03a791296ab37550ffd26213a90c4e
+
+[PATCH v4] sysctl: expose sysctl_check_table for unit testing and use it
+------------------------------------------------------------------------
+  * 20241224171124.3676538-1-jsperbeck@google.com
+  * It has been in testing from january 2025
+  * Review:
+    * Can we get away with not having table_size in the check call?
+    * Can we remove the error without exposing the check call?
+
