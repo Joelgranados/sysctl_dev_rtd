@@ -127,9 +127,28 @@ sysctl: expose sysctl_check_table for unit testing and use it
 
 [PATCH v4] sysctl: expose sysctl_check_table for unit testing and use it
 ------------------------------------------------------------------------
-  * 20241224171124.3676538-1-jsperbeck@google.com
-  * It has been in testing from january 2025
-  * Review:
-    * Can we get away with not having table_size in the check call?
-    * Can we remove the error without exposing the check call?
+* 20241224171124.3676538-1-jsperbeck@google.com
+* Remove the tests from kunit and move it to lib/test_sysctl.c
 
+[PATCH v2] drop_caches: re-enable message after disabling
+---------------------------------------------------------
+* 20250216100514.3948-1-rwchen404@gmail.com
+* Sent Luis' fix to the list
+* Currently in sysctl-next.
+* Will wait till after the merge window to push this
+
+.. code-block:: diff
+
+  diff --git i/fs/drop_caches.c w/fs/drop_caches.c
+  index d45ef541d848..501b9f690445 100644
+  --- i/fs/drop_caches.c
+  +++ w/fs/drop_caches.c
+  @@ -73,7 +73,7 @@ int drop_caches_sysctl_handler(const struct ctl_table *table, int write,
+                                  current->comm, task_pid_nr(current),
+                                  sysctl_drop_caches);
+                  }
+  -               stfu |= sysctl_drop_caches & 4;
+  +               stfu = sysctl_drop_caches & 4;
+          }
+          return 0;
+   }
