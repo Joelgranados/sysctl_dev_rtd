@@ -1,7 +1,8 @@
+.. _Const Qualifying:
+
 ================
 Const Qualifying
 ================
-.. _Const Qualifying:
 
 `watchdog_sysctl revert initial discussion`_
 ============================================

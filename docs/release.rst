@@ -1,7 +1,8 @@
+.. _Release Notes:
+
 =============
 Release Notes
 =============
-.. _Release Notes:
 
 For 6.15
 ========

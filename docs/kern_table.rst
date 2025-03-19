@@ -1,7 +1,8 @@
+.. _Emptying kern_table:
+
 ===================
 Emptying kern_table
 ===================
-.. _Emptying kern_table:
 
 Notes
 =====

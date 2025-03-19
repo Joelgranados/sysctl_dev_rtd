@@ -8,7 +8,7 @@ Current PR
 
 Notes
 =====
-* Void ptrs in ctl_table extra{1,2} :ref:`extra void ptr`.
+* :ref:`Extra Void Pointers`.
 * :ref:`Const Qualifying`
 * :ref:`Emptying kern_table`
 * :ref:`Miscellaneous Notes`

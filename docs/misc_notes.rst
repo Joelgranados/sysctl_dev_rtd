@@ -1,8 +1,8 @@
+.. _Miscellaneous Notes:
+
 ===================
 Miscellaneous Notes
 ===================
-
-.. _Miscellaneous Notes:
 
 [PATCH v4] sysctl: expose sysctl_check_table for unit testing and use it
 ========================================================================

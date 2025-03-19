@@ -1,8 +1,9 @@
-================================
-Void ptrs in ctl_table extra{1,2}
-================================
+.. _Extra Void Pointers:
 
-.. _extra void ptr:
+===================
+Extra Void Pointers
+===================
+
 
 ctl_table struct
 ================
