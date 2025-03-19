@@ -16,6 +16,11 @@ loadpin_sysctl_table
 ====================
 - Pending: implement a new proc_handler function that handles the setting of
   load_root_writable
+- Creating a custom proc_handler:
+  * It is not possible to create a proc_handler that defines param to pass to
+    do_proc_dointvec because do_proc_dointvec is static.
+  * we need to do like what is done for proc_dointvec_jiffies which defies the
+    push towards moving everything away from sysctl.c
 
 memory_allocation_profilling_sysctl
 ===================================
