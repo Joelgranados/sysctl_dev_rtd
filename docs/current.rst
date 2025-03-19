@@ -41,9 +41,10 @@ Misc Fixes
     message-ID: 20250221102151.5593-1-bharadwaj.raju777@gmail.com
 
 
+Notes
+=====
+* `ctl_table extra void ptr`_
 
-On the mailing lists
-====================
 
 Emptying kern_table
 -------------------
@@ -76,13 +77,15 @@ Const qualifying straglers
 .. _watchdog_sysctl revert initial discussion:
    https://lore.kernel.org/all/588ec9ab-b38a-40b3-8db5-575a09e9a126@meta.com/
 
+[PATCH v4] sysctl: expose sysctl_check_table for unit testing and use it
+------------------------------------------------------------------------
+* its in V4
+* Put it in sysctl-testing on 21 Feb 25
+* `sysctl_check_table for unit testing discussion`_
+* Review latest version
 
-sysctl: expose sysctl_check_table for unit testing and use it
--------------------------------------------------------------
-  * its in V4
-  * Put it in sysctl-testing on 21 Feb 25
-  * `sysctl_check_table for unit testing discussion`_
-  * Review latest version
+* 20241224171124.3676538-1-jsperbeck@google.com
+* Remove the tests from kunit and move it to lib/test_sysctl.c
 
 .. _sysctl_check_table for unit testing discussion:
    https://lore.kernel.org/20250121213354.3775644-1-jsperbeck@google.com
@@ -125,17 +128,13 @@ sysctl: expose sysctl_check_table for unit testing and use it
 
 .. _rdma tree: https://web.git.kernel.org/pub/scm/linux/kernel/git/rdma/rdma.git/commit/?h=wip/leon-for-next&id=f33cd9b3fd03a791296ab37550ffd26213a90c4e
 
-[PATCH v4] sysctl: expose sysctl_check_table for unit testing and use it
-------------------------------------------------------------------------
-* 20241224171124.3676538-1-jsperbeck@google.com
-* Remove the tests from kunit and move it to lib/test_sysctl.c
-
 [PATCH v2] drop_caches: re-enable message after disabling
 ---------------------------------------------------------
 * 20250216100514.3948-1-rwchen404@gmail.com
 * Sent Luis' fix to the list
 * Currently in sysctl-next.
 * Will wait till after the merge window to push this
+* posted a V2 with a toggle solution. Was not well received.
 
 .. code-block:: diff
 
