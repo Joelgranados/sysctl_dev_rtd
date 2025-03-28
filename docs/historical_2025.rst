@@ -1,25 +1,37 @@
-.. _Release Notes:
 
-=============
-Release Notes
-=============
+.. _Historical 2025:
 
-For 6.16
-========
-[PATCH 0/4] sysctl: Move the u8 range check test to lib/test_sysctl.c
----------------------------------------------------------------------
-  * 20250321-jag-test_extra_val-v1-0-a01b3b17dc66@kernel.org
-  * Sent on march 21 and is in sysctl-testing (SUCCESS)
-  * Should go into sysctl-next as soon as 6.16-rc1 is baked
+===============
+Historical 2025
+===============
+Here is what happened in 2025
 
-[PATCH v3 0/5] sysctl: Move sysctls from kern_table into their respective
--------------------------------------------------------------------------
-  * 20250313-jag-mv_ctltables-v3-0-91f3bb434d27@kernel.org
-  * Sent on march 13, V3, Been through 0day testing.
-  * Should go into sysctl-next as soon as 6.16-rc1 is baked
+Merge tag 'sysctl-6.15-rc1'
+===========================
+::
 
-For 6.15
-========
+ - Move vm_table members out of kernel/sysctl.c
+
+   All vm_table array members have moved to their respective subsystems
+   leading to the removal of vm_table from kernel/sysctl.c. This
+   increases modularity by placing the ctl_tables closer to where they
+   are actually used and at the same time reducing the chances of merge
+   conflicts in kernel/sysctl.c.
+
+ - ctl_table range fixes
+
+   Replace the proc_handler function that checks variable ranges in
+   coredump_sysctls and vdso_table with the one that actually uses the
+   extra{1,2} pointers as min/max values. This tightens the range of the
+   values that users can pass into the kernel effectively preventing
+   {under,over}flows.
+
+ - Misc fixes
+
+   Correct grammar errors and typos in test messages. Update sysctl
+   files in MAINTAINERS. Constified and removed array size in
+   declaration for alignment_tbl
+
 This all has been merged into linus tree:
 * message-ID: mmb5fqe6a3a7bdoeyeccfn4wafhzgbpsnowjhhj6jtnbdwv24r@73wpky2szbg6
 
@@ -59,4 +71,17 @@ Misc Fixes
     message-ID: 20250221102151.5593-1-bharadwaj.raju777@gmail.com
 
 
+Merge tag 'constfy-sysctl-6.14-rc1'
+===================================
+::
 
+ "All ctl_table declared outside of functions and that remain unmodified
+  after initialization are const qualified.
+
+  This prevents unintended modifications to proc_handler function
+  pointers by placing them in the .rodata section.
+
+  This is a continuation of the tree-wide effort started a few releases
+  ago with the constification of the ctl_table struct arguments in the
+  sysctl API done in 78eb4ea25cd5 ("sysctl: treewide: constify the
+  ctl_table argument of proc_handlers")"

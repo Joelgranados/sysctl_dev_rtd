@@ -26,4 +26,6 @@ To see the tag messages from one year, replace YYYY.
 Years
 =====
 
+* :ref:`Historical 2025`.
 * :ref:`Historical 2024`.
+
