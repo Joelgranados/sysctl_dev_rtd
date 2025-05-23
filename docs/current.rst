@@ -8,7 +8,7 @@ Current PR
 
 Notes
 =====
-* :ref:`Extra Void Pointers`.
+* :ref:`Extra Void Pointers`
 * :ref:`Const Qualifying`
 * :ref:`Emptying kern_table`
 * :ref:`Miscellaneous Notes`

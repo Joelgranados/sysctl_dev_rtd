@@ -32,6 +32,8 @@ Merge tag 'sysctl-6.15-rc1'
    files in MAINTAINERS. Constified and removed array size in
    declaration for alignment_tbl
 
+Notes 'sysctl-6.15-rc1'
+=======================
 This all has been merged into linus tree:
 * message-ID: mmb5fqe6a3a7bdoeyeccfn4wafhzgbpsnowjhhj6jtnbdwv24r@73wpky2szbg6
 
@@ -69,7 +71,6 @@ Misc Fixes
     message-ID: 20250128103853.7806-1-chandrapratap3519@gmail.com
   * [PATCH sysctl-next v2] selftests/sysctl: fix wording of help messages
     message-ID: 20250221102151.5593-1-bharadwaj.raju777@gmail.com
-
 
 Merge tag 'constfy-sysctl-6.14-rc1'
 ===================================
