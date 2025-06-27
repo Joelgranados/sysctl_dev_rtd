@@ -4,6 +4,12 @@
 Emptying kern_table
 ===================
 
+Keepers
+=======
+
+* syctl_write_strict, ngroups_max, cap_last_cap: keep because var is defined in sysctl.c
+* no_unaligned_warning, unaligned_enabled: keep until because var is defined on more than one arch
+
 Second Batch
 ============
 This empties most of the kern_table array (8 elements left)

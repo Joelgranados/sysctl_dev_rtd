@@ -10,6 +10,8 @@ For 6.17
 --------------------------------------------------------------------------------
 * `20250509-jag-mv_ctltables_iter2-v1-0-d0ad83f5f4c3@kernel.org`
 * 0-day testing -> OK and allyes on x86_64 -> OK
+* There is a issue https://lore.kernel.org/20250612175515.3251-1-spasswolf@web.de
+  testing a fix in sysctl-testing
 
 For 6.16
 ========
