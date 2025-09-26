@@ -4,6 +4,10 @@
 Release Notes
 =============
 
+For 6.18
+========
+* No PRs for this release
+
 For 6.17
 ========
 [PATCH 00/12] sysctl: Move sysctls to their respective subsystems (second batch)
@@ -13,6 +17,8 @@ For 6.17
 * There is a issue https://lore.kernel.org/20250612175515.3251-1-spasswolf@web.de
   testing a fix in sysctl-testing...FIXED!
 * https://git.kernel.org/pub/scm/linux/kernel/git/joel.granados/linux.git/log/?h=jag/mv_ctltables_iter2
+* There were some conflicts https://lore.kernel.org/20250708190003.4eabc8ab@canb.auug.org.au
+  https://lore.kernel.org/20250714175916.774e6d79@canb.auug.org.au
 
 [PATCH 0/5] sysctl: Remove last two ctl_tables from the kern_table array
 ========================================================================

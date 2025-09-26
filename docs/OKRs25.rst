@@ -31,6 +31,7 @@ Add the `sysclt ReadTheDocs web site`_ to the MAINTAINERS file
 
 Objective 2 : Remove all non-core ctl_tables from ``kernel/sysctl.c``
 =====================================================================
+:Status: ☑ DONE
 
 The motivation is to avoid merge conflicts in kerne/sysctl.c, and to to give
 back the power of managing the subsystem specific sysctls to their respective

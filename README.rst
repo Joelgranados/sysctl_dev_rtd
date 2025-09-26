@@ -6,8 +6,12 @@ This document is
 
 This document is NOT
 ====================
-* Documentation on how to use sysctl. Go to
-  ``Documentation/admin-guide/sysctl`` Linux kernel directory for that.
+* Documentation on how to use sysctl. Go to the `sysctl documentation`_ under
+  ``Documentation/admin-guide/sysctl`` in the Linux kernel directory tree for
+  that.
+
+.. _sysctl documentation:
+   https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/admin-guide/sysctl
 
 License
 =======

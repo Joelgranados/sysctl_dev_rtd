@@ -3,6 +3,7 @@
 ===================
 Emptying kern_table
 ===================
+All this is upstream. This is DONE
 
 Keepers
 =======
