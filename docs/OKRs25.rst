@@ -10,11 +10,11 @@ misunderstandings and have a way to point to the docs.
 
 
 **Key Result 1.1 ✅:**
----------------------
+----------------------
 Track all sysctl patch sets through `sysctl patchwork`_
 
 **Key Result 1.2 ✅:**
----------------------
+----------------------
 At least once a linux kernel release, update the notes about current development
 in `sysctl ReadTheDocs web site`_
 

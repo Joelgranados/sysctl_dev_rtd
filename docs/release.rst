@@ -4,6 +4,30 @@
 Release Notes
 =============
 
+
+For 6.19
+========
+
+[PATCH] sysctl: fix kernel-doc format warning
+=============================================
+* https://lore.kernel.org/20251017070802.1639215-1-rdunlap@infradead.org
+* In testing
+
+[PATCH 0/7] sysctl: Move jiffies converters out of kernel/sysctl.c
+==================================================================
+* https://lore.kernel.org/20251017-jag-sysctl_jiffies-v1-0-175d81dfdf82@kernel.org
+* In testing
+
+[PATCH] sysctl: fix kernel-doc format warning
+=============================================
+* https://lore.kernel.org/20251017070802.1639215-1-rdunlap@infradead.org
+* In testing
+
+[PATCH v2 00/11] sysctl: Generalize proc handler converter creation
+===================================================================
+* https://lore.kernel.org/20251016-jag-sysctl_conv-v2-0-a2f16529acc4@kernel.org
+* In testing
+
 For 6.18
 ========
 * No PRs for this release

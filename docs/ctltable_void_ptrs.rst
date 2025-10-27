@@ -4,7 +4,6 @@
 Extra Void Pointers
 ===================
 
-
 ctl_table struct
 ================
 
@@ -28,6 +27,16 @@ What is the problem?
    passing SYSCTL_ZERO to proc_do_ulongvec_minmax results in reading
    sysctl_vals[0] and sysctl_vals[1]. Since sysctl_vals[1] is 1 a zero would not
    be accepted (which is what the developer would expect).
+
+2. extra{1,2} are used as a test variable to decide if checking extra{1,2} is
+   needed. In proc_do_ulongvec_minmax these two are first tested for NULLness
+   and then tested for min/max'ness. If we want to replace with unsigned long,
+   we first need to make sure that:
+      a. The use of extra{1,2} does **not** depend on NULL'ness check! We can do
+         this by distinguishing between "normal" and minmax sysctl handlers.
+      b. Need to make sure that both values are always set
+      c. Create a check to see if there are any "lonley" extra{1,2} assignments.
+
 
 Marginal Considertions
 ======================
