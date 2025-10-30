@@ -8,25 +8,30 @@ Release Notes
 For 6.19
 ========
 
-[PATCH] sysctl: fix kernel-doc format warning
-=============================================
-* https://lore.kernel.org/20251017070802.1639215-1-rdunlap@infradead.org
-* In testing
-
 [PATCH 0/7] sysctl: Move jiffies converters out of kernel/sysctl.c
 ==================================================================
 * https://lore.kernel.org/20251017-jag-sysctl_jiffies-v1-0-175d81dfdf82@kernel.org
-* In testing
+* In next
 
-[PATCH] sysctl: fix kernel-doc format warning
-=============================================
-* https://lore.kernel.org/20251017070802.1639215-1-rdunlap@infradead.org
-* In testing
+[PATCH] sysctl remove __user qualifier from stack_erasing_sysctl buffer argument
+================================================================================
+* https://lore.kernel.org/20251027-jag-sysctl-v1-1-1c14a8a939ae@kernel.org
+* In next
 
 [PATCH v2 00/11] sysctl: Generalize proc handler converter creation
 ===================================================================
 * https://lore.kernel.org/20251016-jag-sysctl_conv-v2-0-a2f16529acc4@kernel.org
-* In testing
+* In next
+
+[PATCH] sysctl: fix kernel-doc format warning
+=============================================
+* https://lore.kernel.org/20251017070802.1639215-1-rdunlap@infradead.org
+* In next
+
+[PATCH] watchdog: move nmi_watchdog sysctl into .rodata
+=======================================================
+* https://lore.kernel.org/20250929-jag-nmiwd_const-v1-1-92200d503b1f@kernel.org
+* In next
 
 For 6.18
 ========
