@@ -56,15 +56,16 @@ section.
 
 **Key Result 3.1 ⏳:**
 ----------------------
-Const qualify the net directory
+  1. Const qualify the net directory
+  2. iwcm_ctl_table (depend on net)
+  3. ucma_ctl_table (depend on net)
 
 **Key Result 3.2 ⏳:**
 ----------------------
 Const qualify the ctl_table structs that are modified before calling the sysctl
 register function. This is an initial list (possibly more?):
-watchdog_hardlockup_sysctl, iwcm_ctl_table, ucma_ctl_table,
-memory_allocation_profiling_sysctls, loadpin_sysctl_table.
-
+  1. memory_allocation_profiling_sysctls
+  2. loadpin_sysctl_table.
 
 .. note::
   Icon meaning:

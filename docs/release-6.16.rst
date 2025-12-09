@@ -1,0 +1,23 @@
+.. _Release 6.16:
+
+========
+For 6.16
+========
+
+[PATCH 0/4] sysctl: Move the u8 range check test to lib/test_sysctl.c
+=====================================================================
+
+* `20250321-jag-test_extra_val-v1-0-a01b3b17dc66@kernel.org`
+* Sent on march 21 and is in sysctl-testing (SUCCESS)
+* Should go into sysctl-next as soon as 6.16-rc1 is baked
+* Brought in trailers
+* pushed it to sysctl-testing
+
+[PATCH v3 0/5] sysctl: Move sysctls from kern_table into their respective
+=========================================================================
+
+* `20250313-jag-mv_ctltables-v3-0-91f3bb434d27@kernel.org`
+* Sent on march 13, V3, Been through 0day testing.
+* pushed it to sysctl-next
+
+
