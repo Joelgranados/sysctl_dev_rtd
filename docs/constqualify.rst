@@ -4,19 +4,6 @@
 Const Qualifying
 ================
 
-`watchdog_sysctl revert initial discussion`_
-============================================
-* Reverting "watchdog/hardlockup: keep kernel.nmi_watchdog sysctl as 0444 if
-  probe fails" will remove the modification to the array element and will
-  place nmi_watchdog into .rodata
-* Received a review by petr mladek; moved to sysctl testing.
-
-.. _watchdog_sysctl revert initial discussion:
-   https://lore.kernel.org/all/588ec9ab-b38a-40b3-8db5-575a09e9a126@meta.com/
-
-.. note::
-   Needs CONFIG_LOCKUP_DETECTOR
-
 s390 internal ctl_table
 =======================
 * For Now ignore the inner non-const ctl_table definitions for s390.
@@ -42,6 +29,3 @@ loadpin_sysctl_table
 memory_allocation_profiling_sysctls
 ===================================
 - Pending: Analisys
-
-
-
