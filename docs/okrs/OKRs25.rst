@@ -1,8 +1,10 @@
+.. _OKRs 2025:
+
 ================
 sysctl OKRs 2025
 ================
 
-Objective 1 ⏳: Provide contextual info on series and the subsystem in general
+Objective 1 ✅: Provide contextual info on series and the subsystem in general
 ==============================================================================
 
 Motivation is to increase awareness on what is needed in the subsystem, avoid
@@ -60,16 +62,17 @@ section.
   2. iwcm_ctl_table (depend on net)
   3. ucma_ctl_table (depend on net)
 
-**Key Result 3.2 ⏳:**
+.. note::
+   Const qualifying the network sysctl tables is tricky as they change the
+   permission (ctl_table->mode) based on what namespace that are generated from.
+   This is done in order to protect the namespaces from interfering with each
+   other. Still need to find a clean transition for this one.
+
+
+**Key Result 3.2 ✅:**
 ----------------------
 Const qualify the ctl_table structs that are modified before calling the sysctl
 register function. This is an initial list (possibly more?):
   1. memory_allocation_profiling_sysctls
   2. loadpin_sysctl_table.
-
-.. note::
-  Icon meaning:
-    *  ✅ DONE
-    *  ⏳ TODO
-
 
