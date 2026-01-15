@@ -102,3 +102,32 @@ Delete the *conv_param structures
           }
           return 0;
    }
+
+Macro to generate bidirectional converters
+==========================================
+
+.. code-block:: diff
+      sysctl: Use GEN_PROC_TYPE_CONV to generate bidirectional converters
+
+      Add GEN_PROC_TYPE_CONV to generate bidirectional converter
+      functions for sysctl operations. The macro takes suffix, type,
+      user-to-kernel and kernel-to-user converter functions, and range check
+      parameters to create do_proc_*_conv functions that call the appropriate
+      proc_*_conv function.
+
+      This is a preparation commit; the macro will be used as the converter
+      functions get created.
+
+      Signed-off-by: Joel Granados <joel.granados@kernel.org>
+
+  #define ARG_ bool *n,
+  #define ARG_u
+  #define VAR_ n,
+  #define VAR_u
+  #define GEN_PROC_TYPE_CONV(S, Q, T, u2k_conv, k2u_conv, R)        \
+  int do_proc_##Q##T##_conv##S(ARG_##Q ulong *u_ptr, Q##T * k_ptr,  \
+    int dir, const struct ctl_table *tbl)                           \
+  {                                                                 \
+    return proc_##Q##T##_conv(VAR_##Q u_ptr, k_ptr, dir, tbl, R,    \
+      u2k_conv, k2u_conv);                                          \
+  }
