@@ -14,6 +14,6 @@ Contents
 .. toctree::
 
    Current Development <current>
-   2025 OKRs <OKRs25>
-   Historical <historical>
+   OKRs <okrs/okrs>
+   Historical <historical/historical>
    Ideas <ideas>
