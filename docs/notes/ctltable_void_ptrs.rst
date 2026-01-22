@@ -37,7 +37,6 @@ What is the problem?
       b. Need to make sure that both values are always set
       c. Create a check to see if there are any "lonley" extra{1,2} assignments.
 
-
 Marginal Considertions
 ======================
 
@@ -63,3 +62,18 @@ Marginal Considertions
   3. update all users
   4. Update users that use extra{1,2} for non minmax
   5. then remove extra{1,2}
+
+ctl_table entry macro
+=====================
+
+One of the many issues that is keeping us from moving forward on this is that
+there are lots of calling sites for sysctl and any change requires a treewide
+effort using up maintainer resources for reviews and such. A solution is to
+bring back the entry creation to sysctl.{c,h} and pay the treewide change only
+once.
+
+* More info here :ref:`Table Entry Macro`
+
+
+
+
