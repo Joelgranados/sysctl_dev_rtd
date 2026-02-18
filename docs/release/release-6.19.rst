@@ -23,7 +23,7 @@ For 6.19
 
 .. note::
   There should be an explicity protection for the converters (as with the proc
-  functions); but this can be punted to 6.20. We are already working on a
+  functions); but this can be punted to 7.00. We are already working on a
   potential fix: [1] 
 
   [1]https://git.kernel.org/pub/scm/linux/kernel/git/joel.granados/linux.git/log/?h=jag/no-macro-conv

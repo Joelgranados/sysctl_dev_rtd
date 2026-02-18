@@ -13,11 +13,11 @@ loadpin_sysctl_table
     do_proc_dointvec because do_proc_dointvec is static.
   - we need to do like what is done for proc_dointvec_jiffies which defies the
     push towards moving everything away from sysctl.c
-* We are tackling this in :ref: `Release 6.20`
+* We are tackling this in :ref: `Release 7.00`
 
 memory_allocation_profiling_sysctls
 ===================================
-* We are tackling this in :ref: `Release 6.20`
+* We are tackling this in :ref: `Release 7.00`
 
 s390 internal ctl_table
 =======================
