@@ -35,7 +35,7 @@ site).
 Each of these macros should be named differently, it might look clean to just
 have the same name, but this just confuses the users of the macro. An option
 is to use capital letters to signify what each macro expects: "V" for variable,
-"N" for name, "M" for mode, "R" for range, "H" for handler and "S" for max size
+"N" for name, "M" for mode, "R" for range, "H" for handler and "L" for maxlen
 and to use them in the order the macro expects the args. (e.g. CTLTBL_ENTRY_VN
 would expect a variable and a name)
 
