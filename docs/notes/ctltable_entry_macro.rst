@@ -21,9 +21,8 @@ This is specifically going to be used to change the type of extra{1,2} from void
 Macro name
 ==========
 
-* SYSCTL_CTLTABLE_ENTRY : is probably a good (maybe a bit too long) name. It
-  signifies the SYSCTL subsystem and it specifies what type (CTLTABLE) of entry
-  it is changing.
+* CTLTBL_ENTRY : is probably a good (maybe a bit too long) name. It signifies
+  that it is an ENTRY in the the ctl_table struct (CTLTBL).
 
 Arguments
 =========
@@ -31,14 +30,20 @@ Arguments
 Here is a initial (not yet finalized) list of macros and their args and their
 semantics. These are just proposals and we should decide on them depending on if
 they are used and how often (we should not create a macro just to fit one call
-site). Each of these macros should be named differently (I was just lazy with my
-examples).
+site).
+
+Each of these macros should be named differently, it might look clean to just
+have the same name, but this just confuses the users of the macro. An option
+is to use capital letters to signify what each macro expects: "V" for variable,
+"N" for name, "M" for mode, "R" for range, "H" for handler and "S" for max size
+and to use them in the order the macro expects the args. (e.g. CTLTBL_ENTRY_VN
+would expect a variable and a name)
 
 I use a get_handler as a standin for a potential function or macro that will
 decide on the proc_handler function based on the data type and value of the
 extra pointers.
 
-* SYSCTL_CTLTABLE_ENTRY(variable)
+* CTLTBL_ENTRY_V(variable)
   This one would give you defulats for everything. The name would be the same as
   the variable, The length would be based on the type, the handler would be
   based on the type and there would be no range check. By default it will create
@@ -47,7 +52,7 @@ extra pointers.
 ::
 
     {
-      .procname     = variable,
+      .procname     = "variable",
       .data         = (void*) &variable,
       .maxlen       = sizeof(variable),
       .mode         = 444,
@@ -56,7 +61,7 @@ extra pointers.
       .extra2       = NULL,
     }
 
-* SYSCTL_CTLTABLE_ENTRY(name, variable)
+* CTLTBL_ENTRY_VN(variable, name)
   Same as previous but allows to have a name different from the variable name
 
 ::
@@ -71,7 +76,7 @@ extra pointers.
       .extra2       = NULL,
     }
 
-* SYSCTL_CTLTABLE_ENTRY(name, variable, mode)
+* CTLTBL_ENTRY_VNM(variable, name, mode)
   Same as previous but allows to define the access bits.
 
 ::
@@ -86,7 +91,7 @@ extra pointers.
       .extra2       = NULL,
     }
 
-* SYSCTL_CTLTABLE_ENTRY(name, variable, mode, MIN, MAX)
+* CTLTBL_ENTRY_VNMR(variable, name, mode, MIN, MAX)
   Same as previous but activates range check and sets the extra{1,2}.
 
 ::
@@ -102,7 +107,7 @@ extra pointers.
     }
 
 
-* SYSCTL_CTLTABLE_ENTRY(name, type, mode, handler)
+* CTLTBL_ENTRY_NMH(name, type, mode, handler)
   In some caller sites the variable is not defined. This usually means that
   there is a custom proc handler that takes care of "finding" the variable.
 
