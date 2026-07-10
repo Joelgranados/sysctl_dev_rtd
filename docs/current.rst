@@ -12,5 +12,6 @@ Notes
 * :ref:`Const Qualifying`
 * :ref:`Emptying kern_table`
 * :ref:`Miscellaneous Notes`
+* :ref:`Consolidate dovec`
 
 
