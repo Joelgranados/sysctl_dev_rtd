@@ -2,8 +2,8 @@
 Current Development
 ===================
 
-Current PR
-==========
+Releases
+========
 * :ref:`Release Notes`
 
 Notes
