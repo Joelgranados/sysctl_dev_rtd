@@ -8,6 +8,7 @@ Releases
 
 Notes
 =====
+* :ref:`do_proc_vec`
 * :ref:`Extra Void Pointers`
 * :ref:`Const Qualifying`
 * :ref:`Emptying kern_table`
