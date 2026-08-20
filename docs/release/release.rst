@@ -4,6 +4,7 @@
 Release Notes
 =============
 
+ * :ref:`Release 7.04`
  * :ref:`Release 7.03`
  * No PRS for 7.2
  * No PRS for 7.1
