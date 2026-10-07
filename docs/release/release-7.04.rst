@@ -29,3 +29,11 @@ selftests re-write
 * Sent to LKLM
 * In sysctl-next
 
+Misc
+====
+
+* test_sysctl: unregister tables before freeing bitmap
+  MID: 20260919185110.2243068-1-lhfff@tju.edu.cn
+* sysctl: quiet unused variable warning in fs/proc/proc_sysctl.c:init_header(
+  MID: 20260918062338.1039303-1-enelsonmoore@gmail.com
+

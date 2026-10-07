@@ -47,7 +47,7 @@ FIXES
 * [PATCH v2] syscall_user_dispatch: Use CONFIG_SYSCTL for sysctl guard
   - MID: 20260822072325.51994-1-kmehltretter@gmail.com
   - State: Needs to go upstream as a fix
-  - Sent PULL
+  - upstream
 
 * [PATCH 1/2] sysctl: Make proc_dointvec_ms_jiffies_minmax() enforce minmax again
   - MID: 20260905233819.1064529-2-kuniyu@google.com
@@ -56,7 +56,7 @@ FIXES
     d174174c6776 ("sysctl: replace SYSCTL_INT_CONV_CUSTOM macro with functions")
     incorrectly removed.
     Fixes: d174174c6776 ("sysctl: replace SYSCTL_INT_CONV_CUSTOM macro with functions") Signed....
-  - Sent PULL
+  - upstream
 
 * [PATCH 2/2] sysctl: Make proc_doulongvec_ms_jiffies_minmax() enforce minmax again.
   - MID: 20260905233819.1064529-3-kuniyu@google.com
@@ -69,6 +69,9 @@ FIXES
     do_proc_ulong_conv_ms_jiffies so it is clear that there should be a range
     check.
     Fixes: b96b5c6708ea ("sysctl: Replace do_proc_do{int,ulong,uint}vec with do_proc_vec")
-  - Sent PULL
+  - upstream
 
+* [PATCH 1/2] sysctl: Negate before converting in the int read path
+  - MID: 20260922031229.2300283-2-zhanxusheng@xiaomi.com
+  - testing in sysctl-next
 
