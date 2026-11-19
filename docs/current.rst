@@ -8,6 +8,7 @@ Releases
 
 Notes
 =====
+* :ref:`void ptr survey`
 * :ref:`partial vec users`
 * :ref:`Selftest re-write`
 * :ref:`do_proc_vec`
