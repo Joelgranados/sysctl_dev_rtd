@@ -42,6 +42,6 @@ FIXES
 * [PATCH] sysctl: Do jiffy / ms conversion in ulong space
   MID: 20261118-lklm-sysctl-jiffie-ms-conv-v1-1-bb60e5101418@kernel.org
        20261102111516.1398262-2-thnkslprpt@gmail.com
-  State: Sent to linux-next
+  State: Merged!
 
 
